@@ -22,6 +22,7 @@ function getComputerChoice() {
 //Declare the players score variable//
 //Create two variable human score and computerScore
 //Make them equal 0//
+//Move them into the playGame function//
 
 
 
@@ -30,7 +31,7 @@ function getComputerChoice() {
 //Make humanChoice case-insensitive//
 //write a function playGame//
 //move playRound into playGame//
-//call playRound 5 times//
+//call playRound 5 times with a loop//
 
  
 function playGame() { 
@@ -73,20 +74,12 @@ let computerScore = 0;
         console.log("CONGRATS YOU WIN!! SCOREBOARD FOR YOU IS " + humanScore + " SCOREBOARD FOR COMPUTER IS "+ computerScore);
     }   else if (humanScore < computerScore) {
         console.log("YOU LOSE!! SCOREBOARD FOR COMPUTER" + computerScore + " SCOREBOARD FOR YOU " +  humanScore)
-    } else if(huamnScore == computerScore) {
+    } else if(humanScore == computerScore) {
         console.log("its a tie")
     }
          
           
-    }
-       
-
-        
-    
-        
-           
-
-         
+    }  
 playGame();
 
 
