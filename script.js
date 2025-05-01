@@ -65,21 +65,33 @@ let computerScore = 0;
         }
 
         
-        
-        playRound(humanChoice, computerChoice)
+        if (humanScore === 5 || computerScore === 5) {
+            if (humanScore > computerScore) {
+                 winnerDiv.textContent = "CONGRATS YOU WIN!! SCOREBOARD FOR YOU IS " + humanScore + " SCOREBOARD FOR COMPUTER IS "+ computerScore;
+            }   else if (humanScore < computerScore) {
+                winnerDiv.textContent = "YOU LOSE!! SCOREBOARD FOR COMPUTER " + computerScore + " SCOREBOARD FOR YOU " +  humanScore;
+            }   else if (humanScore == computerScore) {
+                winnerDiv.textContent = "its a tie"   
 
-       
-    }   if (humanScore > computerScore) {
-        console.log("CONGRATS YOU WIN!! SCOREBOARD FOR YOU IS " + humanScore + " SCOREBOARD FOR COMPUTER IS "+ computerScore);
-    }   else if (humanScore < computerScore) {
-        console.log("YOU LOSE!! SCOREBOARD FOR COMPUTER" + computerScore + " SCOREBOARD FOR YOU " +  humanScore)
-    } else if(humanScore == computerScore) {
-        console.log("its a tie")
-    }
+        }
+ }}
+    
+ 
+ window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("rock").addEventListener("click", () => {
+          playRound("rock", getComputerChoice());
+        });
+      
+        document.getElementById("paper").addEventListener("click", () => {
+          playRound("paper", getComputerChoice());
+        });
+      
+        document.getElementById("scissors").addEventListener("click", () => {
+          playRound("scissors", getComputerChoice());
+        });
+      });
+    
          
-          
-    }  
-playGame();
 
 
 
